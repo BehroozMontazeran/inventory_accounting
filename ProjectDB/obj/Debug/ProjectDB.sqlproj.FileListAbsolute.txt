@@ -1,0 +1,9 @@
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\bin\Debug\ProjectDB.dacpac
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\bin\Debug\ProjectDB.dll
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\bin\Debug\ProjectDB.pdb
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\obj\Debug\ProjectDB.dll
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\obj\Debug\ProjectDB.pdb
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\obj\Debug\Model.xml
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\obj\Debug\refactor.xml
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\obj\Debug\postdeploy.sql
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\ProjectDB\obj\Debug\predeploy.sql

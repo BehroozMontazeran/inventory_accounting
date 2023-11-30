@@ -1,0 +1,172 @@
+﻿@using DataLibrary.Logic;
+@model IEnumerable<UniProjectForms.Models.FormModel>
+
+
+@{
+    ViewBag.Title = "List Forms";
+    string VWAction = "";
+    string VWTxt = "";
+    string ProfessorName = FormProcessor.GetsProfessor(FormProcessor.LoadProfessor(ViewBag.ProfessorId));
+    string ManagerName = FormProcessor.GetsManager(FormProcessor.LoadManager(ViewBag.ManagerId));
+    if (Session["username"].ToString().Substring(0, 1) == "9" && ViewBag.ProfessorConfirmation == "تایید" && ViewBag.ManagerConfirmation == "تایید")
+    {
+        //Response.Redirect("~/Home/StudentViewForm");
+        ViewBag.visibility = "hidden";
+        VWAction = "StudentEdit";
+        VWTxt = "عدم";
+        
+    }
+
+    //else if (Session["username"].ToString().Substring(0, 1) == "9" && (ViewBag.ProfessorConfirmation == "عدم تایید" || ViewBag.ProfessorConfirmation == null) && (ViewBag.ManagerConfirmation == "عدم تایید" || ViewBag.ManagerConfirmation == "اصلاح شود" || ViewBag.ManagerConfirmation == null))
+    //{
+    //    VWAction = "StudentEdit";
+    //    VWTxt = "اصلاح پروژه";
+    //}
+    else if (Session["username"].ToString().Substring(0, 1) == "1")
+    {
+        VWAction = "ProfessorEdit";
+        VWTxt = "رای";
+    }
+    else if (Session["username"].ToString().Substring(0, 1) == "2")
+    {
+        VWAction = "ManagerEdit";
+        VWTxt = "رای";
+    }
+    else
+    {
+        VWAction = "StudentEdit";
+        VWTxt = "اصلاح پروژه";
+    }
+    
+    
+}
+
+<h2 dir="rtl">لیست پروژه های پیشنهادی</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Form")
+</p>*@
+<table class="table" id="ListProject" style="width:2000px">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.StudentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassedUnits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Avarage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th >
+            @Html.DisplayNameFor(model => model.ProjectDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessorFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessorConfirmation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessorConfirmationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfessorConfirmationComment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerConfirmation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerConfirmationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerConfirmationComment)
+        </th>
+        <th id="OnlyProfManag"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassedUnits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Avarage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => ProfessorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessorConfirmation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfessorConfirmationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.ProfessorConfirmationComment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => ManagerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerConfirmation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerConfirmationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerConfirmationComment)
+        </td>
+        <td style="visibility:@ViewBag.visibility;">
+            @Html.ActionLink(VWTxt, VWAction, new { id = item.Id })
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+
+</table>

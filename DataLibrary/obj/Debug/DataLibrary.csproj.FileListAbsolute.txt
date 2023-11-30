@@ -1,0 +1,14 @@
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\DataLibrary\bin\Debug\DataLibrary.dll
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\DataLibrary\bin\Debug\DataLibrary.pdb
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\DataLibrary\bin\Debug\Dapper.dll
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\DataLibrary\bin\Debug\Dapper.xml
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\DataLibrary\obj\Debug\DataLibrary.csprojResolveAssemblyReference.cache
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\DataLibrary\obj\Debug\DataLibrary.dll
+c:\users\bb\documents\visual studio 2013\Projects\UniProjectFormsSolution\DataLibrary\obj\Debug\DataLibrary.pdb
+\\BAHAREH\University\UniProjectFormsSolution\DataLibrary\bin\Debug\DataLibrary.dll
+\\BAHAREH\University\UniProjectFormsSolution\DataLibrary\bin\Debug\DataLibrary.pdb
+\\BAHAREH\University\UniProjectFormsSolution\DataLibrary\bin\Debug\Dapper.dll
+\\BAHAREH\University\UniProjectFormsSolution\DataLibrary\bin\Debug\Dapper.xml
+\\BAHAREH\University\UniProjectFormsSolution\DataLibrary\obj\Debug\DataLibrary.csprojResolveAssemblyReference.cache
+\\BAHAREH\University\UniProjectFormsSolution\DataLibrary\obj\Debug\DataLibrary.dll
+\\BAHAREH\University\UniProjectFormsSolution\DataLibrary\obj\Debug\DataLibrary.pdb
